@@ -1,6 +1,5 @@
 from selenium import webdriver
-import os
-import time as t
+import time
 
 username = (open("username.txt", "r")).read()
 password = (open("password.txt", "r")).read()
@@ -29,14 +28,14 @@ url3 = "//*[@id=\"end_seconds\"]/option[" + str(room_length.get(length)) + "]" #
 driver = webdriver.Chrome() # open chrome
 driver.get(url1) # navigate to website
 
-t.sleep(5) # give page time to load otherwise error
+time.sleep(5) # give page time to load otherwise error
 
 driver.find_element_by_xpath(url2).click() # find the starting time and click on it
 driver.find_element_by_xpath('//*[@id="mli"]').send_keys(username)        
 driver.find_element_by_xpath('//*[@id="password"]').send_keys(password)       
 driver.find_element_by_xpath('/html/body/div[3]/div[2]/div[1]/form/div[2]/div[2]/p[2]/input').click() # login after putting credentials
 
-t.sleep(5) # give page time to load again
+time.sleep(5) # give page time to load again
 
 driver.find_element_by_xpath('//*[@id="name"]').send_keys("Hardcore study session") # default booking title
 driver.find_element_by_xpath('//*[@id="description"]').send_keys("We studying very hard") # default booking description
