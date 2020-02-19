@@ -26,4 +26,4 @@ class Bot:
         self.driver.find_element_by_xpath('//*[@id="password"]').send_keys(self.password)
         self.driver.find_element_by_xpath('/html/body/div[3]/div[2]/div[1]/form/div[2]/div[2]/p[2]/input').click()
         self.driver.find_element_by_xpath('//*[@id="name"]').send_keys("EECS4101 final project")
-        self.driver.find_element_by_xpath('//*[@id="description"]').send_keys("we working real hard")
+        self.driver.find_element_by_xpath('//*[@id="description"]').send_keys("we working real hard")z
